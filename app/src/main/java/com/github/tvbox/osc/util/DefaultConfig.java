@@ -48,7 +48,7 @@ public class DefaultConfig {
             }
         }
         if (withMy)
-            data.add(0, new MovieSort.SortData("my0", "🏡"));
+            data.add(0, new MovieSort.SortData("my0", "ஐ♡ஐ"));
         Collections.sort(data);
         return data;
     }
