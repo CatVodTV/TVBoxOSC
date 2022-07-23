@@ -287,8 +287,8 @@ findViewById(R.id.play_time_reset).setOnClickListener(new OnClickListener() {
     @Override
     public void onClick(View v) {
         try {
-            mPlayerConfig.put("et", 0);
-            mPlayerConfig.put("st", 0);
+            mPlayerConfig.put("et", 90);
+            mPlayerConfig.put("st", 90);
             updatePlayerCfgView();
             listener.updatePlayerCfg();
         } catch (JSONException e) {
@@ -300,7 +300,7 @@ findViewById(R.id.play_time_reset).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
-                    int step = Hawk.get(HawkConfig.PLAY_TIME_STEP, 90);
+                    int step = Hawk.get(HawkConfig.PLAY_TIME_STEP, 30);
                     int st = mPlayerConfig.getInt("st");
                     st += step;
                     if (st > 60 * 6)
@@ -317,7 +317,7 @@ findViewById(R.id.play_time_reset).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
-                    int step = Hawk.get(HawkConfig.PLAY_TIME_STEP, 90);
+                    int step = Hawk.get(HawkConfig.PLAY_TIME_STEP, 30);
                     int et = mPlayerConfig.getInt("et");
                     et += step;
                     if (et > 60 * 6)
