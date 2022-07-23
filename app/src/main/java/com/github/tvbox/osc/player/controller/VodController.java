@@ -287,8 +287,8 @@ findViewById(R.id.play_time_reset).setOnClickListener(new OnClickListener() {
     @Override
     public void onClick(View v) {
         try {
-            mPlayerConfig.put("et", 90);
-            mPlayerConfig.put("st", 90);
+            mPlayerConfig.put("et", 0);
+            mPlayerConfig.put("st", 0);
             updatePlayerCfgView();
             listener.updatePlayerCfg();
         } catch (JSONException e) {
